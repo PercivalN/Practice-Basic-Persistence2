@@ -84,8 +84,15 @@
                                                 <constraint firstItem="r94-HS-rFf" firstAttribute="centerY" secondItem="fs0-SO-LJn" secondAttribute="centerY" id="lpa-gx-Cco"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="distanceLabel" destination="FzI-LP-3vT" id="oQZ-Qj-P3S"/>
+                                            <outlet property="nameLabel" destination="cQ6-Og-gMg" id="xEJ-gM-7WS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="6KQ-ZF-LrG"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

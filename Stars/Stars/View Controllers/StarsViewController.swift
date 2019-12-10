@@ -20,6 +20,7 @@ class StarsViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		tableView.dataSource = self // This creates a connection between the tableView data source and this view controller. This is only true is you have an extension that subclasses from a UITableViewDataSource.
 	}
 
 	// MARK: Actions
@@ -38,7 +39,21 @@ class StarsViewController: UIViewController {
 		nameTextField.text = ""
 		distanceTextField.text = ""
 		nameTextField.becomeFirstResponder()
+		tableView.reloadData()
 	}
-	
 }
 
+extension StarsViewController: UITableViewDataSource {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return starController.stars.count
+	}
+
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: "StarCell", for: indexPath) as? StarTableViewCell else { return UITableViewCell() }
+
+		let star = starController.stars[indexPath.row]
+		cell.star = star
+
+		return cell
+	}
+}

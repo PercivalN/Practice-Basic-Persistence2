@@ -18,4 +18,13 @@ class StarController {
 		stars.append(star)
 		return star
 	}
+
+	// MARK: - Persistence
+	// This is a computed property, so everytime it is called it runs the code.
+	private var persistentFileURL: URL? {
+		let fm = FileManager.default
+		guard let dir = fm.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
+		return dir.appendingPathComponent("stars.plist")
+	}
+
 }

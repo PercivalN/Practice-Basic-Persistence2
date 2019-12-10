@@ -13,9 +13,14 @@ class StarController {
 
 	private(set) var stars: [Star] = []
 
+	init() {
+		loadFromPersistentStore()
+	}
+
 	@discardableResult func createStar(named name: String, withDistance distance: Double) -> Star {
 		let star = Star(name: name, distance: distance)
 		stars.append(star)
+		saveToPersistentStore()
 		return star
 	}
 

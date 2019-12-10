@@ -24,6 +24,14 @@ class StarController {
 		return star
 	}
 
+	func listStars() -> String {
+		var output = ""
+		for star in stars {
+			output += "\(star.name) is \(star.distance).\n"
+		}
+		return output
+	}
+
 	// MARK: - Persistence
 	// This is a computed property, so everytime it is called it runs the code.
 	private var persistentFileURL: URL? {

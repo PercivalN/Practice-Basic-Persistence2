@@ -14,6 +14,8 @@
 		DD5B555F239F2387004C4178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD5B555E239F2387004C4178 /* Assets.xcassets */; };
 		DD5B5562239F2387004C4178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD5B5560239F2387004C4178 /* LaunchScreen.storyboard */; };
 		DD95405C239F49C8006CC751 /* StarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95405B239F49C8006CC751 /* StarTableViewCell.swift */; };
+		DD95405F239F4C4D006CC751 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD95405E239F4C4D006CC751 /* Star.swift */; };
+		DD954062239F4CD8006CC751 /* StarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954061239F4CD8006CC751 /* StarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		DD5B5561239F2387004C4178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD5B5563239F2387004C4178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD95405B239F49C8006CC751 /* StarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTableViewCell.swift; sourceTree = "<group>"; };
+		DD95405E239F4C4D006CC751 /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		DD954061239F4CD8006CC751 /* StarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +64,12 @@
 			children = (
 				DD5B5555239F2385004C4178 /* AppDelegate.swift */,
 				DD5B5557239F2385004C4178 /* SceneDelegate.swift */,
+				DD95405D239F4A38006CC751 /* Views */,
 				DD95405A239F49B1006CC751 /* View Controllers */,
-				DD95405D239F4A38006CC751 /* Storyboards */,
+				DD954060239F4C51006CC751 /* Models */,
+				DD954063239F4CDC006CC751 /* Model Controller */,
 				DD5B555E239F2387004C4178 /* Assets.xcassets */,
 				DD5B5563239F2387004C4178 /* Info.plist */,
-				DD95405B239F49C8006CC751 /* StarTableViewCell.swift */,
 			);
 			path = Stars;
 			sourceTree = "<group>";
@@ -77,13 +82,30 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		DD95405D239F4A38006CC751 /* Storyboards */ = {
+		DD95405D239F4A38006CC751 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				DD5B555B239F2385004C4178 /* Main.storyboard */,
 				DD5B5560239F2387004C4178 /* LaunchScreen.storyboard */,
+				DD95405B239F49C8006CC751 /* StarTableViewCell.swift */,
 			);
-			path = Storyboards;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DD954060239F4C51006CC751 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD95405E239F4C4D006CC751 /* Star.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD954063239F4CDC006CC751 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD954061239F4CD8006CC751 /* StarController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +182,9 @@
 				DD5B555A239F2385004C4178 /* StarsViewController.swift in Sources */,
 				DD5B5556239F2385004C4178 /* AppDelegate.swift in Sources */,
 				DD5B5558239F2385004C4178 /* SceneDelegate.swift in Sources */,
+				DD95405F239F4C4D006CC751 /* Star.swift in Sources */,
 				DD95405C239F49C8006CC751 /* StarTableViewCell.swift in Sources */,
+				DD954062239F4CD8006CC751 /* StarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
